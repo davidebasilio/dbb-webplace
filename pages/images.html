@@ -1,0 +1,90 @@
+<div class="top">
+<h1>Images</h1>
+<span style="float: left;">"A picture is worth a thousand words." <i>popular wisdom</i></span>
+</div>
+<div class="contents">
+<div id="imggrid">
+<script type="text/javascript">
+galleries_title = [
+"Moby Grape",
+"Cathedral Ledge",
+"Baxter",
+"The Gunks",
+"Frankenstein",
+"Rumney",
+"Pinnacle Gully",
+"Adamello",
+"Tuolumne",
+"Yosemite",
+"Yosemite",
+"Pinnacles",
+"Yosemite",
+"The Grotto",
+"Mickey's Beach"]
+
+galleries_root = [
+"20140725_cannon",
+"20140719_cathedral",
+"20140712_baxter",
+"20140512_gunks",
+"20140309_frankenstein",
+"20140302_rumney",
+"20140301_pinnacle",
+"20130720_adamello",
+"20130616_tuolumne",
+"20130425_yosemite",
+"20130414_yosemite",
+"20130329_pinnacles",
+"20130325_yosemite",
+"20130320_grotto",
+"20130224_mickeysbeach"]
+
+galleries_date = [
+"NH - USA, Jul. 2014",
+"NH - USA, Jul. 2014",
+"ME - USA, Jul. 2014",
+"NY - USA, May 2014",
+"NH - USA, Mar. 2014",
+"NH - USA, Mar. 2014",
+"NH - USA, Mar. 2014",
+"Alps - Italy, Jul. 2013",
+"CA - USA, Jun. 2013",
+"CA - USA, Apr. 2013",
+"CA - USA, Apr. 2013",
+"CA - USA, Mar. 2013",
+"CA - USA, Mar. 2013",
+"CA - USA, Mar. 2013",
+"CA - USA, Feb. 2013"]
+
+var grid = document.getElementById("imggrid")
+grid.innerHTML = "";
+for (var i = 0; i < galleries_title.length; i++) {
+    grid.innerHTML += '\
+<a id="gallery-opener' + i + '" href="javascript:;" onclick="expandGallery(' + i + ', ' + galleries_title.length + ')">\
+<span class="ggalleries" id="gallery' + i + '">\
+<span class="h2_">' + galleries_title[i] + '</span><br />\
+<span class="galleriespic">\
+<img alt="' + galleries_title[i] + '" src="galleries/' + galleries_root[i] + '/thumb.jpg" />\
+</span><br />\
+<span class="si">' + galleries_date[i] + '</span>\
+</span></a>'
+}
+</script>
+</div>
+
+<div id="slide">
+<div id="curslide">
+<div id="gallerynav">
+<span id="galleryprev" class="navspan" onclick="galleryPrev()">Previous</span>
+<span id="galleryclose" class="navspan" onclick="closeGallery()">Close</span>
+<span id="gallerynext" class="navspan" onclick="galleryNext()">Next</span>
+</div>
+<div><a target="_blank" href="" id="curphotolink"><img id="curphoto" src=""/></a></div>
+<div id="descbox"><span id="curdesc">-</span></div>
+</div>
+</div>
+</div>
+<div style="text-align: right; margin: 0px; padding: 0px; margin-top: -20px">
+<span style="padding-right: 30pt; font-size: 8pt;">Image resolution reduced for online viewing; contact me if you are interested in full-resolution images.</span>
+</div>
+
